@@ -1,25 +1,79 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2bz-QP-gvK">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="Ikv-8s-0u5">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2bz-QP-gvK" customClass="ViewController" customModule="Onboarding" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="Wo9-Qv-eLP"/>
+                        <viewControllerLayoutGuide type="bottom" id="iCh-DS-PKN"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="RzH-Sl-RLN">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="gOd-Uu-dy5">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZIp-tI-Brb">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="336"/>
+                                        <color key="backgroundColor" red="0.18039215689999999" green="0.18039215689999999" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="Kba-0z-skk">
+                                        <rect key="frame" x="0.0" y="337" width="600" height="263"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Kba-0z-skk" firstAttribute="height" secondItem="gOd-Uu-dy5" secondAttribute="height" multiplier="0.4377" id="EPo-jC-nBa"/>
+                                    <constraint firstItem="ZIp-tI-Brb" firstAttribute="height" secondItem="gOd-Uu-dy5" secondAttribute="height" multiplier="0.5" id="jfA-fW-6uR"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="jfA-fW-6uR"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="Dt4-Vb-Jxe">
+                                <rect key="frame" x="262.5" y="547" width="74" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="c8b-Yf-N2A"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.47843137250000001" green="0.87450980389999999" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d4W-EO-ntb">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="d4W-EO-ntb" secondAttribute="trailing" id="3rT-1e-9bA"/>
+                            <constraint firstItem="gOd-Uu-dy5" firstAttribute="bottom" secondItem="iCh-DS-PKN" secondAttribute="top" id="90p-bg-ZA7"/>
+                            <constraint firstItem="gOd-Uu-dy5" firstAttribute="leading" secondItem="d4W-EO-ntb" secondAttribute="leading" id="BZq-EB-ggo"/>
+                            <constraint firstItem="d4W-EO-ntb" firstAttribute="leading" secondItem="RzH-Sl-RLN" secondAttribute="leading" id="Bf2-hF-NBz"/>
+                            <constraint firstItem="Dt4-Vb-Jxe" firstAttribute="centerX" secondItem="gOd-Uu-dy5" secondAttribute="centerX" id="DB2-Pl-e02"/>
+                            <constraint firstItem="iCh-DS-PKN" firstAttribute="top" secondItem="Dt4-Vb-Jxe" secondAttribute="bottom" constant="16" id="EvY-Hw-0Nl"/>
+                            <constraint firstItem="gOd-Uu-dy5" firstAttribute="top" secondItem="d4W-EO-ntb" secondAttribute="top" id="FET-iB-w2a"/>
+                            <constraint firstItem="d4W-EO-ntb" firstAttribute="bottom" secondItem="iCh-DS-PKN" secondAttribute="top" id="J5Y-ae-PCB"/>
+                            <constraint firstItem="gOd-Uu-dy5" firstAttribute="trailing" secondItem="d4W-EO-ntb" secondAttribute="trailing" id="KYM-YW-4uz"/>
+                            <constraint firstItem="d4W-EO-ntb" firstAttribute="top" secondItem="RzH-Sl-RLN" secondAttribute="top" id="ZwA-Wo-Qku"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pageControl" destination="Dt4-Vb-Jxe" id="q3p-vl-RV3"/>
+                        <outlet property="scrollView" destination="d4W-EO-ntb" id="ZbK-5n-52W"/>
+                        <outlet property="topView" destination="ZIp-tI-Brb" id="ZR4-7L-dHX"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pqs-H3-jQb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="257" y="352"/>
         </scene>
     </scenes>
 </document>
